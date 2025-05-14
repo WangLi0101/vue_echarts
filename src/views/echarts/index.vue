@@ -10,7 +10,12 @@
         {{ item.gropuName }}
       </h2>
       <div
-        class="echarts-list grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+        class="echarts-list grid gap-4 grid-cols-1"
+        :class="{
+          'grid-cols-1': item.list.length === 1,
+          'grid-cols-2': item.list.length === 2,
+          'grid-cols-3': item.list.length > 2,
+        }"
       >
         <div class="item" v-for="(e, eindex) in item.list" :key="eindex">
           <div
