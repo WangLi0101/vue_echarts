@@ -1,6 +1,6 @@
 ### 初始化
 
-``` bash
+```bash
 npm install
 npm i -g pnpm
 pnpm i
@@ -8,12 +8,12 @@ pnpm i
 
 ### 运行
 
-``` bash
+```bash
 pnpm run dev
 ```
 
 ### 打包
 
-``` bash
+```bash
 pnpm run build
 ```

@@ -14,7 +14,7 @@
         :class="{
           'grid-cols-1': item.list.length === 1,
           'grid-cols-2': item.list.length === 2,
-          'grid-cols-3': item.list.length > 2,
+          'grid-cols-3': item.list.length > 2
         }"
       >
         <div class="item" v-for="(e, eindex) in item.list" :key="eindex">

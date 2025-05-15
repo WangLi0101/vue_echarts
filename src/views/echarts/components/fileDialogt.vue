@@ -33,7 +33,7 @@ import {
   type UploadInstance,
   type UploadProps,
   type UploadRawFile,
-  type UploadRequestOptions,
+  type UploadRequestOptions
 } from "element-plus";
 import { computed, ref } from "vue";
 import type { EchartsData } from "../utils";
@@ -49,14 +49,14 @@ const props = defineProps<Props>();
 const emits = defineEmits<Emits>();
 const dialogVisible = computed({
   get: () => props.modelValue,
-  set: (value) => {
+  set: value => {
     emits("update:modelValue", value);
-  },
+  }
 });
 let currentFile: File | null = null;
 const upload = ref<UploadInstance>();
 
-const handleExceed: UploadProps["onExceed"] = (files) => {
+const handleExceed: UploadProps["onExceed"] = files => {
   upload.value!.clearFiles();
   const file = files[0] as UploadRawFile;
   currentFile = file;

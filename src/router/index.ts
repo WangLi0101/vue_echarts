@@ -4,13 +4,13 @@ const routes = [
   {
     path: "/",
     name: "home",
-    component: () => import("../views/echarts/index.vue"),
-  },
+    component: () => import("../views/echarts/index.vue")
+  }
 ];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes,
+  routes
 });
 
 export default router;
