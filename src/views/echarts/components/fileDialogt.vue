@@ -71,6 +71,7 @@ const isLoading = ref(false);
 const submit = () => {
   // 获取上传文件
   if (!currentFile) {
+    // @ts-expect-error
     ElMessage.error("请选择文件");
     return;
   }
